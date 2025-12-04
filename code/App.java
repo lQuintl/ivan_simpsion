@@ -1,11 +1,9 @@
 /***************************************************************************
- * Programa 5a :  Simpson Integration of t Distribution
- * Clase:    App
- * Autor:   Luis Rodolfo Rodriguez Quintero
- * Fecha:   4/Diciembre/2025
+ * Clase:    App.Java
+ * Autor:   Cristian Ivan Garcia Blanco
+ * Fecha:   4/12/2025
  *
- * Descripción:Punto de entrada del programa. 
- * Crea el objeto Logic y dispara el procesamiento principal.
+ * Entrada del programa
  ***************************************************************************/
 
 public class App
@@ -14,12 +12,7 @@ public class App
     /**
      * Método principal (main) del programa.
      *
-     * Este método actúa como punto de entrada de la aplicación. Su única
-     * responsabilidad es:
-     *
-     * 1.Declarar una instancia de la clase Logic.
-     * 2.Inicializar el objeto Logic.
-     * 3.Invocar el método logic1a(), que contiene el flujo principal del programa.
+     * Este método actúa como punto de entrada de la aplicación.
      */
     public static void main(String[] args)
     {

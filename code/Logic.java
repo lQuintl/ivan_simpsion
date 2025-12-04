@@ -1,10 +1,9 @@
 /***************************************************************************
  * Programa 5a: Simpson Integration of t Distribution
- * Clase:    Logic
- * Autor:   Luis Rodolfo Rodriguez Quintero
- * Fecha:     4/Diciembre/2025
+ * Clase:   Logic
+ * Autor:   Cristian Ivan Garcia Blanco
+ * Fecha:   4/12/2025
  *
- *   - Usa SimpsonIntegration, GammaFunction y Output.
  ***************************************************************************/
 
 import java.io.BufferedReader;
@@ -14,9 +13,8 @@ import java.io.IOException;
 public class Logic
 {
 
-    /*  Atributos
 
-    /** Número de segmentos a usar en la integración (debe ser par). */
+    /** Número de segmentos a usar en la integración */
     private int intNumSeg;   
 
     /** Error máximo aceptable para la aproximación numérica. */
@@ -25,12 +23,8 @@ public class Logic
     /** Grados de libertad de la distribución t. */
     private int intDOF;      
 
-    /** Límite superior de integración (valor de x). */
+    /** Límite superior de integración */
     private double dblX;     
-
-
-
-    //Metodos publicos
 
     public void logic1a() 
     {
@@ -120,7 +114,7 @@ public class Logic
         }
         catch (NumberFormatException e) // Errores en parseo numérico.
         {
-            System.err.println("Error en formato numérico de test.txt: " + e.getMessage());
+            System.err.println("Error en formato numérico de input.txt " + e.getMessage());
         }
     }
 }

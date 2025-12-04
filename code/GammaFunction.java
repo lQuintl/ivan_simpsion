@@ -1,63 +1,17 @@
 /***************************************************************************
- * Programa 5a: Simpson Integration of Distribution
- * Clase:    GammaFunction
- * Autor:   Luis Rodolfo Rodriguez Quintero
- * Fecha:     4/Diciembre/2025
+ * Clase:    GammaFunction.java
+ * Autor:   Cristian Ivan Garcia Blanco
+ * Fecha:   4/12/2025
  *
- * Descripción:
- *   Proporciona el cálculo de la función Gamma para:
- *     - Valores enteros positivos
- *     - Valores semi-enteros
- *
- * 
- *   - La variable gammaValue almacena el último resultado calculado
- *     para trazabilidad y depuración.
+ * Descripción: Proporciona el cálculo de la función Gamma 
  ***************************************************************************/
 
-/**
- * Clase GammaFunction.
- * <p>
- * Esta clase implementa la función Gamma únicamente para valores:
- * <ul>
- *     <li>Enteros positivos</li>
- *     <li>Semi-enteros (n + 0.5)</li>
- * </ul>
- * Estos son los únicos casos necesarios para Program 5
- * (integración de la distribución t).
- */
 public class GammaFunction
 {
 
-    /*------------------------------------------------------------------*/
-    /*  Attributes                                                      */
-    /*------------------------------------------------------------------*/
-
-    /** Último valor de Gamma calculado, almacenado para trazabilidad. */
+    //Se almacena el ultimo valor de gamma
     private double gammaValue;
 
-
-    /*------------------------------------------------------------------*/
-    /*  Public Methods                                                  */
-    /*------------------------------------------------------------------*/
-
-    /**
-     * Calcula Gamma(n) para un entero positivo n.
-     *
-     * <p>
-     * Definición:
-     *     Gamma(n) = (n - 1)!
-     *
-     * <p>
-     * Ejemplos:
-     *     Gamma(1) = 1  
-     *     Gamma(2) = 1  
-     *     Gamma(3) = 2  
-     *     Gamma(4) = 6
-     *
-     * @param intValue entero n (> 0)
-     * @return Gamma(n)
-     * @throws IllegalArgumentException si n &le; 0 (Gamma no está definida)
-     */
     public double computeIntGamma(int intValue) 
     {
         // Resultado acumulado (factorial de n-1).
@@ -66,7 +20,7 @@ public class GammaFunction
         if (intValue <= 0) // Verifica que el argumento sea válido.
         {
             throw new IllegalArgumentException(
-                    "Gamma no está definida para enteros <= 0"); // Error explicativo.
+                    "Gamma no está definida para enteros <= 0"); 
         }
 
         // Multiplica desde 1 hasta (n-1) para obtener (n-1)!.
@@ -79,20 +33,7 @@ public class GammaFunction
         return gammaValue;   // Devuelve el resultado.
     }
 
-    /**
-     * Calcula Gamma(x) para valores double.
-     *
-     * <p>La implementación cubre únicamente:</p>
-     * <ul>
-     *     <li>Enteros positivos</li>
-     *     <li>Semi-enteros (n + 0.5)</li>
-     * </ul>
-     *
-     * Esto es suficiente para calcular:
-     *   Gamma((ν+1)/2)  
-     *   Gamma(ν/2)
-     * requeridos en la distribución t.
-     *
+    /*
      * @param doubleValue valor double x para el cual se desea Gamma(x)
      * @return Gamma(doubleValue)
      *
@@ -143,11 +84,10 @@ public class GammaFunction
 
     /**
      * Regresa el último valor de Gamma calculado.
-     *
      * @return gammaValue
      */
     public double getGammaValue() 
     {
-        return gammaValue; // Simple getter.
+        return gammaValue; 
     }
 }

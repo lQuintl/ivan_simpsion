@@ -1,11 +1,9 @@
 /***************************************************************************
- * Program:  Program 5 - Simpson Integration of t Distribution
- * Clase:    Output
- * Autor:   Luis Rodolfo Rodriguez Quintero
- * Fecha:     4/Diciembre/2025
+ * Clase:   Output
+ * Autor:   Cristian Ivan Garcia Blanco
+ * Fecha:   4/12/2025
  *
- * Descripción:
- *   Encapsula la escritura de texto a un archivo de salida.
+ *   Genera el archivo de salida
  *   
  ***************************************************************************/
 
@@ -15,8 +13,6 @@ import java.io.PrintWriter;
 
 /**
  * Proporciona un método para escribir texto en un archivo externo.
- * Encapsula las operaciones de manejo de flujos de salida, siguiendo
- * una estructura clara y controlada.
  */
 public class Output
 {
